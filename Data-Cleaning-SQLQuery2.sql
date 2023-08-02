@@ -153,7 +153,7 @@ where row_num > 1
 
 --------------------------------------------------------------------------------------------------
 
- -- Delete Unsed Columns
+ -- Delete Unused Columns
 
  select *
  From  [Data-Cleaning].dbo.NashvilleHousing
@@ -163,6 +163,77 @@ where row_num > 1
 
   ALTER TABLE [Data-Cleaning].dbo.NashvilleHousing
  DROP COLUMN SaleDate
+-----------------------------------------------------------------------------------------------------
+/*
+
+Data Exploration using SQL
+
+*/
+
+--Find the average value of a house by year.
+
+Select Distinct(YearBuilt), AVG(TotalValue) as AverageValue
+From [Data-Cleaning].dbo.NashvilleHousing
+Group by YearBuilt
+Order by YearBuilt Desc
+
+-----------------------------------------------------------------------------------------
+--Average value of a house base on the number of bedrooms and bathrooms
+
+Select Bedrooms, FullBath, AVG(TotalValue) as AvgValue
+From [Data-Cleaning].dbo.NashvilleHousing
+Group by Bedrooms, FullBath
+Order by AvgValue Desc
+
+-------------------------------------------------------------------------------------------------
+
+--See the effect, on total acreage has on house value
+
+Select Acreage, AVG(TotalValue) as AvgValue
+From [Data-Cleaning].dbo.NashvilleHousing
+Group by Acreage
+order by Acreage Desc
+--------------------------------------------------------------------------------------------------
+
+--Does the city house is located 
+
+SELECT PropertySplitCity, AVG(TotalValue) as AvgValue
+FROM [Data-Cleaning].dbo.NashvilleHousing
+GROUP BY PropertySplitCity
+ORDER BY AvgValue DESC
+
+--Highest Revenue Generated Month 
+--we need to create new column that extracts only the months that houses are sold
+
+ALTER Table [Data-Cleaning].dbo.NashvilleHousing
+ADD MonthSold Nvarchar(255);
+
+Update [Data-Cleaning].dbo.NashvilleHousing 
+SET Monthsold = PARSENAME(Replace(SaleDateConverted, ',', '.'), 2)
+
+SELECT MonthSold, Count(*) as NumHousesSold
+From [Data-Cleaning].dbo.NashvilleHousing
+Group By MonthSold
+Order by NumHousesSold Desc
+
+--------------------------------------------------------------------------------------
+--Total Value vs Sold Value
+
+SELECT SalePrice, TotalValue, (SalePrice - TotalValue) As Diff
+From [Data-Cleaning].dbo.NashvilleHousing
+
+-----------------------------------------------------------------------------------------------
+--LandType Vs Total Value
+
+SELECT LandUse, Avg(TotalValue) as AvgVal
+From [Data-Cleaning].dbo.NashvilleHousing
+Group by LandUse
+Order by AvgVal Desc
+
+-------------------------------------------------------------------------------------------------
+
+
+
 
 
 
