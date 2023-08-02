@@ -23,8 +23,11 @@ Welcome to the Nashville Housing Data Cleaning Project! To enhance the Kaggle Na
 ## Visual Insights
 Explore visualizations derived from the cleaned dataset, showcasing key trends and patterns in Nashville's housing market. These visuals offer a quick understanding of the project's impact:
 ### Sample Visualization: In this Picture, we can see the cleaned data before and after. by Enhancing data clarity by converting "Y" and "N" values to "Yes" and "No."
-#### Before: ![BeforeDataCleaning](https://github.com/Akshay0649/Data-Cleaning-Using-Microsoft-SQL-server/assets/92001850/8783f327-ce00-4b4f-aa79-9321972c2953)
-#### After: ![After Data Cleaning](https://github.com/Akshay0649/Data-Cleaning-Using-Microsoft-SQL-server/assets/92001850/c78b4c23-cc23-4c16-9e8f-117923550481)
+#### Before:
+![BeforeDataCleaning](https://github.com/Akshay0649/Data-Cleaning-Using-Microsoft-SQL-server/assets/92001850/8783f327-ce00-4b4f-aa79-9321972c2953)
+
+#### After: 
+![After Data Cleaning](https://github.com/Akshay0649/Data-Cleaning-Using-Microsoft-SQL-server/assets/92001850/c78b4c23-cc23-4c16-9e8f-117923550481)
 
 
 
