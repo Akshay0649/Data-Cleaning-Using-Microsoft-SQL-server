@@ -12,7 +12,13 @@ Welcome to the Nashville Housing Data Cleaning Project! To enhance the Kaggle Na
 5. Eliminate duplicates to ensure accurate analysis.
 6. Streamline the dataset by removing unnecessary columns.
 ### Data Exploration
-
+1. Understanding Property Value Trends by Year Built.
+2. Analyzing the Impact of Bedrooms and Bathrooms.
+3. Exploring Property Value and Acreage Relationship.
+4. Comparing Property Values Across Cities.
+5. Identifying High-Selling Months.
+6. Evaluating Sale Price and Assessed Value.
+7. Investigating Property Value by Land Use.
 
 ## Visual Insights
 Explore visualizations derived from the cleaned dataset, showcasing key trends and patterns in Nashville's housing market. These visuals offer a quick understanding of the project's impact:
